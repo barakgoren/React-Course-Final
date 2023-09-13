@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import AppHw from './hw_components/appHw';
 
