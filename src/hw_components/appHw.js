@@ -1,7 +1,10 @@
 import React from 'react'
+import FoodList from './foodList'
 
 export default function AppHw() {
   return (
-    <div>AppHw</div>
+    <div>
+        <FoodList/>
+    </div>
   )
 }
