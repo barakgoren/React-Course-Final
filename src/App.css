@@ -1,1 +1,79 @@
 /* for global css */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+
+/* 
+this.forestGreen='#CBE4DE';
+this.brightGreen='#0E8388';
+this.limeGreen='#2E4F4F';
+this.warmYellow='#2C3333';
+*/
+
+body {
+    background-color: #CBE4DE;
+}
+
+.headerDiv {
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 24px;
+    background-color: #2E4F4F;
+    color: #CBE4DE;
+}
+
+/* .App .main-container {
+    height: 100vh;
+    width: 100vw;
+} */
+
+.main-container {
+    height: 100vh;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #2E4F4F;
+    color: white;
+    text-align: center;
+}
+
+.input {
+    background-color: #0E8388;
+    height: 150px;
+    width: 70%;
+    border-radius: 15px;
+    margin-left: 15%;
+    overflow: hidden;
+    margin-top: 50px;
+    /* border: 3px solid #0E8388 ; */
+}
+
+.convert-btn {
+    margin-top: 105px;
+    background-color: #2E4F4F;
+    border: none;
+    color: #CBE4DE;
+}
+
+.convert-btn:hover {
+    background-color: #CBE4DE;
+    color: #2E4F4F;
+}
+
+.score {
+    height: 100vh;
+    text-align: center;
+    color: #2E4F4F;
+}
+
+.score-display {
+    margin-top: 60px;
+    font-size: 80px;
+    font-weight: 700;
+}
