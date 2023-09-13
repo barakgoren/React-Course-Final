@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import AppHw from './hw_components/appHw';
 
 function App() {
   return (
     <div className="App">
-      <h1>React work</h1>
+      <AppHw/>
     </div>
   );
 }
