@@ -2,7 +2,9 @@
 .blinking-text {
     animation: blink 1s infinite;
 }
-
+.currency-input {
+    width: 30%;
+}
 @keyframes blink {
     0% {
         color: red;
