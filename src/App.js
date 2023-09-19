@@ -1,10 +1,10 @@
 import './App.css';
+import ExchangeApp from './Components/exchangeApp';
 
 function App() {
-  const user = "koko";
   return (
-    <div className="App">
-      <h1>React work {user}</h1>
+    <div className="App container-fluid">
+      <ExchangeApp/>
     </div>
   );
 }

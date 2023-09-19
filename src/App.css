@@ -1,1 +1,16 @@
 /* for global css */
+.blinking-text {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        color: red;
+    }
+    50% {
+        color: rgb(128, 128, 128);
+    }
+    100% {
+        color: red;
+    }
+}
