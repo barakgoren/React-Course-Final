@@ -3,11 +3,15 @@ import Input from './input'
 import Score from './score'
 
 export default function ExchangeApp() {
+    const [inputObj, setInput] = useState({});
+    const collectInput = (input) => {
+        setInput(input);
+    }
   return (
     <div className='container'>
-        <Input/>
+        <Input collectInput={collectInput}/>
         <hr/>
-        <Score/>
+        <Score input={inputObj}/>
     </div>
   )
 }

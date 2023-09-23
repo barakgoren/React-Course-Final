@@ -26,18 +26,40 @@ export default function Input(props) {
         setCurrency(tempArr);
     }
 
+    const handleConvert = () => {
+        let from;
+        let to;
+        for(var i = 0; i<selectFrom.current.options.length; i++){
+            if(selectFrom.current.options[i].value === selectFrom.current.value){
+                from = selectFrom.current.options[i].label;
+            }
+        }
+        for(var i = 0; i<selectTo.current.options.length; i++){
+            if(selectTo.current.options[i].value === selectTo.current.value){
+                to = selectTo.current.options[i].label;
+            }
+        }
+        const inputObj = {
+            from: selectFrom.current.value,
+            to: selectTo.current.value,
+            fromLabel: from,
+            toLabel: to,
+            amount: amountRef.current.value
+        }
+        props.collectInput(inputObj);
+    }
     return (<div className=''>
         <h1 className='display-1 text-center'><span className='blinking-text'>Live</span> <br />Currency Exchange
         </h1>
         <div className='input-container d-flex flex-column row justify-content-center'>
             <div className='amount-container mb-2'>
                 <label>Amount</label>
-                <input className='form-control border-dark' defaultValue={100} type="number" placeholder='100'></input>
+                <input ref={amountRef} className='form-control border-dark' defaultValue={100} type="number" placeholder='100'></input>
             </div>
             <div className='align-items-end row justify-content-center'>
                 <div className='select-container col-4'>
                     <label>From</label>
-                    <select className="form-select border-dark" aria-label="Default select example" id="currency" name="currency">
+                    <select ref={selectFrom} className="form-select border-dark" aria-label="Default select example" id="currency" name="currency">
                         {currencyArr.map(item => {
                             return (<option key={item.value} value={item.value}>{item.currency}</option>)
                         })}
@@ -46,14 +68,14 @@ export default function Input(props) {
                 <button className='button mb-2 text-center col-1'><LiaExchangeAltSolid /></button>
                 <div className='select-container col-4'>
                     <label>To</label>
-                    <select className="form-select border-dark" aria-label="Default select example" id="currency" name="currency">
+                    <select ref={selectTo} className="form-select border-dark" aria-label="Default select example" id="currency" name="currency">
                         {currencyArr.map(item => {
                             return (<option key={item.value} value={item.value}>{item.currency}</option>)
                         })}
                     </select>
                 </div>
             </div>
-            <button className='convert-btn btn'>Convert</button>
+            <button onClick={handleConvert} className='convert-btn btn'>Convert</button>
         </div>
     </div>)
 }
