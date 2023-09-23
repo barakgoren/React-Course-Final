@@ -27,8 +27,14 @@
     border-radius: 0px 0px 20px 20px;
     color: white;
 }
-.amount-container {
+.amount {
     max-width: 600px;
+}
+.amount-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 25%;
 }
 .select-container {
     max-width: 200px;

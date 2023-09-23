@@ -65,7 +65,7 @@ export default function Input(props) {
         <div className='input-container d-flex flex-column row justify-content-center'>
             <div className='amount-container mb-2'>
                 <label>Amount</label>
-                <input ref={amountRef} className='form-control border-dark' defaultValue={100} type="number" placeholder='100'></input>
+                <input ref={amountRef} className='amount form-control border-dark' defaultValue={100} type="number" placeholder='100'></input>
             </div>
             <div className='align-items-end row justify-content-center'>
                 <div className='select-container col-4'>
