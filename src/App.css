@@ -2,8 +2,20 @@
 .blinking-text {
     animation: blink 1s infinite;
 }
-.currency-input {
-    width: 30%;
+.button {
+    border: none;
+    background: none;
+}
+.input-container {
+    background-color: rgb(188, 188, 188);
+    border-radius: 20px;
+}
+.amount-container {
+    max-width: 600px;
+}
+.select-container {
+    max-width: 200px;
+    min-width: 100px;
 }
 @keyframes blink {
     0% {
