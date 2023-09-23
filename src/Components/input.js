@@ -37,6 +37,20 @@ export default function Input(props) {
         props.collectInput(initObj);
     }
 
+    const getOptionsIndexs = () => {
+        let listToReturn = [];
+        for(var i = 0; i<selectFrom.current.options.length; i++){
+            if(selectFrom.current.options[i].value === selectFrom.current.value){
+                listToReturn.push(selectFrom.current.options[i].value);
+            }
+        }
+        for(var i = 0; i<selectTo.current.options.length; i++){
+            if(selectTo.current.options[i].value === selectTo.current.value){
+                listToReturn.push(selectTo.current.options[i].value);
+            }
+        }
+        return listToReturn;
+    }
     const handleConvert = () => {
         let from;
         let to;
@@ -59,6 +73,12 @@ export default function Input(props) {
         }
         props.collectInput(inputObj);
     }
+
+    const handleSwitch = () => {
+        let indexs = getOptionsIndexs();
+        selectFrom.current.value = indexs[1];
+        selectTo.current.value = indexs[0];
+    }
     return (<div className=''>
         <h1 className='display-1 text-center'><span className='blinking-text'>Live</span> <br />Currency Exchange
         </h1>
@@ -76,7 +96,7 @@ export default function Input(props) {
                         })}
                     </select>
                 </div>
-                <button className='button mb-2 text-center col-1'><LiaExchangeAltSolid /></button>
+                <button onClick={handleSwitch} className='button mb-2 text-center col-1'><LiaExchangeAltSolid /></button>
                 <div className='select-container col-4'>
                     <label>To</label>
                     <select ref={selectTo} className="form-select border-dark" aria-label="Default select example" id="currency" name="currency">
