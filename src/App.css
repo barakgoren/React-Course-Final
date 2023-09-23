@@ -9,6 +9,23 @@
 .input-container {
     background-color: rgb(188, 188, 188);
     border-radius: 20px;
+    position: relative;
+    padding-bottom: 75px;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    overflow: hidden;
+}
+.convert-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 85%;
+    border-radius: 0px;
+    background-color:gray;
+    border: 1px solid grey;
+    border-radius: 0px 0px 20px 20px;
+    color: white;
 }
 .amount-container {
     max-width: 600px;

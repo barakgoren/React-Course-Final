@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { LiaExchangeAltSolid } from 'react-icons/lia'
 
 export default function Input(props) {
     const [currencyArr, setCurrency] = useState([]);
-    
+    const amountRef = useRef();
+    const selectFrom = useRef();
+    const selectTo = useRef();
+
     useEffect(() => {
         doApi();
     }, [])
@@ -26,7 +29,7 @@ export default function Input(props) {
     return (<div className=''>
         <h1 className='display-1 text-center'><span className='blinking-text'>Live</span> <br />Currency Exchange
         </h1>
-        <div className='input-container p-5 row justify-content-center'>
+        <div className='input-container d-flex flex-column row justify-content-center'>
             <div className='amount-container mb-2'>
                 <label>Amount</label>
                 <input className='form-control border-dark' defaultValue={100} type="number" placeholder='100'></input>
@@ -49,8 +52,8 @@ export default function Input(props) {
                         })}
                     </select>
                 </div>
-
             </div>
+            <button className='convert-btn btn'>Convert</button>
         </div>
     </div>)
 }
