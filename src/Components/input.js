@@ -9,6 +9,7 @@ export default function Input(props) {
 
     useEffect(() => {
         doApi();
+        initInput();
     }, [])
 
     const doApi = async () => {
@@ -24,6 +25,16 @@ export default function Input(props) {
             tempArr.push(newObj);
         }
         setCurrency(tempArr);
+    }
+    const initInput = () => {
+        const initObj = {
+            from: 1,
+            to: 1,
+            fromLabel: 'USD',
+            toLabel: 'USD',
+            amount: 100,
+        }
+        props.collectInput(initObj);
     }
 
     const handleConvert = () => {
@@ -44,7 +55,7 @@ export default function Input(props) {
             to: selectTo.current.value,
             fromLabel: from,
             toLabel: to,
-            amount: amountRef.current.value
+            amount: amountRef.current.value,
         }
         props.collectInput(inputObj);
     }
