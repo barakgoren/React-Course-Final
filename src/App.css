@@ -30,12 +30,15 @@
 .amount {
     max-width: 600px;
 }
-.amount-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding-left: 25%;
+@media screen and (min-width: 991px) {
+    .amount-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 25%;
+    }
 }
+
 .select-container {
     max-width: 200px;
     min-width: 100px;
