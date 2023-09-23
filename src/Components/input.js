@@ -44,9 +44,9 @@ export default function Input(props) {
                 listToReturn.push(selectFrom.current.options[i].value);
             }
         }
-        for(var i = 0; i<selectTo.current.options.length; i++){
-            if(selectTo.current.options[i].value === selectTo.current.value){
-                listToReturn.push(selectTo.current.options[i].value);
+        for(var j = 0; j<selectTo.current.options.length; j++){
+            if(selectTo.current.options[j].value === selectTo.current.value){
+                listToReturn.push(selectTo.current.options[j].value);
             }
         }
         return listToReturn;
@@ -59,9 +59,9 @@ export default function Input(props) {
                 from = selectFrom.current.options[i].label;
             }
         }
-        for(var i = 0; i<selectTo.current.options.length; i++){
-            if(selectTo.current.options[i].value === selectTo.current.value){
-                to = selectTo.current.options[i].label;
+        for(var j = 0; j<selectTo.current.options.length; j++){
+            if(selectTo.current.options[j].value === selectTo.current.value){
+                to = selectTo.current.options[j].label;
             }
         }
         const inputObj = {
@@ -78,6 +78,7 @@ export default function Input(props) {
         let indexs = getOptionsIndexs();
         selectFrom.current.value = indexs[1];
         selectTo.current.value = indexs[0];
+        handleConvert();
     }
     return (<div className=''>
         <h1 className='display-1 text-center'><span className='blinking-text'>Live</span> <br />Currency Exchange
@@ -85,7 +86,7 @@ export default function Input(props) {
         <div className='input-container d-flex flex-column row justify-content-center'>
             <div className='amount-container mb-2'>
                 <label>Amount</label>
-                <input ref={amountRef} className='amount form-control border-dark' defaultValue={100} type="number" placeholder='100'></input>
+                <input onChange={handleConvert} ref={amountRef} className='amount form-control border-dark' defaultValue={100} type="number" placeholder='100'></input>
             </div>
             <div className='align-items-end row justify-content-center'>
                 <div className='select-container col-4'>
