@@ -1,4 +1,5 @@
 # Status: [![](https://img.shields.io/badge/Completed-green?style=for-the-badge)](https://docs.rs/crate/redant/latest)
+Visit Live in: https://react-final-barak.netlify.app
 
 # Getting Started with Create React App
 
