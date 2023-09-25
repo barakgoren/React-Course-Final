@@ -1,3 +1,5 @@
+# Status: [![](https://img.shields.io/badge/Working_on_it-yellow?style=for-the-badge)](https://docs.rs/crate/redant/latest)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
